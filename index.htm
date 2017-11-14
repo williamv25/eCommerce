@@ -1,0 +1,87 @@
+<!doctype HTML>
+
+<html>
+    <head>
+        <title> Title </title>
+    <style>
+        img{
+            width:150px;
+            vertical-align:"center";
+        }
+        h1{ 
+            text-align:Center;
+            border: solid;
+        }
+        input{
+            width:50px;
+            border: solid;
+        }
+        div{
+            background-color: white ;
+            width:300px;
+        }"
+    </style>
+    <script>
+    function initPrices(){
+        var pr1 = $10;
+        var pr2 = $15;
+        var pr3 = $20;
+        document.getElementById("watch 1").innerHTML = "Price: $" + pr1;
+        document.getElementById("watch 2").innerHTML = "Price: $" + pr2;
+        document.getElementById("watch 3").innerHTML = "Price: $" + pr3;
+
+
+    }    
+    function ProcessOrder(){
+        var q1 = parseInt(document.getElementById("qty1").value);
+        var q2 = parseInt(document.getElementById("qty2").value);
+        var q3 = parseInt(document.getElementById("qty3").value);
+        var customerSubtotal = (pr1 * q1) + (pr2 * q2) + (pr3 * q3)
+        var companySubtotal = ()
+        var build = "Customer info";
+        build += "Customer info";
+        build += "Subtotal: $ " + customerSubtotal;
+        build += "`<br>"
+        build += "Tax: $" + tax;
+        build += "<br>"
+        build += "Shipping: $" + ShippingCost;
+        build += "<br>"
+        build += "Total: $" + price;
+        op.innerHTML = build;
+    }
+</script>
+</head>
+<body onload="initPrices()">
+    <h1 >Watches for men </h1>
+
+    <div>
+        <img src="image1.jpg" >
+        <p> Tissot <p>
+        <p> Price:$100 </p><br>
+        <button onclick="Intiprices()">add to cart</button>
+        <span id="span1">  </span>
+        QTY:<input type="text" id="qty1" placeholder="amount">
+
+    </div>
+    <hr>
+    <div>
+        <img src="image2.jpg"><br>
+        <p> Omega <p>
+        <p> Price:$150 </p><br>
+        <button onclick="Intiprices()">add to cart</button>
+        <span id="span2">  </span>
+        QTY:<input type="text" id="qty2" placeholder="amount">
+    </div>
+    <hr>
+    <div>
+        <img src="image3.jpg"><br>
+        <p> Rolex <p> 
+        <p> Price:$200 </p><br>
+        <button onclick="Intiprices()">add to cart</button>
+        <span id="span3"></span>
+        QTY:<input type="text" id="qty3" placeholder="amount">
+    </div>
+    <button onclick="ProcessOrder()">Check out</button>
+    <div id="output"></div>
+</body>
+</html>
